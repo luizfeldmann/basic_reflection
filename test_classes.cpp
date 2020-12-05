@@ -1,0 +1,44 @@
+#include "test_classes.hpp"
+
+#include "reflection.hpp"
+
+IMPLEMENT_DYNAMIC_REFLECTION(shape)
+BEGIN_REFLECTION(shape)
+    REGISTER_FIELD(shape, x)
+    REGISTER_FIELD(shape, y)
+END_REFLECTION()
+
+IMPLEMENT_DYNAMIC_REFLECTION(square)
+BEGIN_REFLECTION(square)
+    REGISTER_FIELD(square, width)
+    REGISTER_FIELD(square, height)
+    INHERIT_BASE(shape)
+END_REFLECTION()
+
+IMPLEMENT_DYNAMIC_REFLECTION(circle)
+BEGIN_REFLECTION(circle)
+    REGISTER_FIELD(circle, radius)
+    INHERIT_BASE(shape)
+END_REFLECTION()
+
+
+IMPLEMENT_DYNAMIC_REFLECTION(animal)
+BEGIN_REFLECTION(animal)
+    REGISTER_FIELD(animal, height)
+    REGISTER_FIELD(animal, weight)
+    REGISTER_FIELD(animal, bloodType)
+END_REFLECTION()
+
+IMPLEMENT_DYNAMIC_REFLECTION(dog)
+BEGIN_REFLECTION(dog)
+    REGISTER_FIELD(dog, race)
+    REGISTER_FIELD(dog, color)
+    INHERIT_BASE(animal)
+END_REFLECTION()
+
+IMPLEMENT_DYNAMIC_REFLECTION(cat)
+BEGIN_REFLECTION(cat)
+    REGISTER_FIELD(cat, species)
+    REGISTER_FIELD(cat, numberFurrballs)
+    INHERIT_BASE(animal)
+END_REFLECTION()

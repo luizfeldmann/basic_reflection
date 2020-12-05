@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="testReflection" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="reflection/;test/" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/testReflection" prefix_auto="1" extension_auto="1" />
+				<Option object_output="bin/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="main.cpp">
+			<Option virtualFolder="test/" />
+		</Unit>
+		<Unit filename="reflection.cpp">
+			<Option virtualFolder="reflection/" />
+		</Unit>
+		<Unit filename="reflection.hpp">
+			<Option virtualFolder="reflection/" />
+		</Unit>
+		<Unit filename="test_classes.cpp">
+			<Option weight="0" />
+			<Option virtualFolder="test/" />
+		</Unit>
+		<Unit filename="test_classes.hpp">
+			<Option virtualFolder="test/" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
